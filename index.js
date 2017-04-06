@@ -1,10 +1,10 @@
 var mode = {
   start: [
     {regex: /<!--/, token: 'comment', next: 'comment'},
-    {regex: /__.*__+/, token: 'bold'}, //naive implementation (no ranges within bold range supported)
-    {regex: /\*\*.*\*\*+/, token: 'bold'}, //naive implementation (no ranges within bold range supported)
-    {regex: /_.*_+/, token: 'italic'}, //naive implementation (no ranges within italic range supported)
-    {regex: /\*.*\*+/, token: 'italic'}, //naive implementation (no ranges within italic range supported)
+    {regex: /__.*?__+/, token: 'bold'}, //naive implementation (no ranges within bold range supported)
+    {regex: /\*\*.*?\*\*+/, token: 'bold'}, //naive implementation (no ranges within bold range supported)
+    {regex: /_.*?_+/, token: 'italic'}, //naive implementation (no ranges within italic range supported)
+    {regex: /\*.*?\*+/, token: 'italic'}, //naive implementation (no ranges within italic range supported)
     {regex: /[ \t]*\(\d+\)/, sol: true, token: 'argument-statement'},
     {regex: /#+.*/, sol: true, token: 'heading'},
     {regex: /--/, sol: true, token: 'inference', next: 'inference'},
