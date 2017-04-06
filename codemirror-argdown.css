@@ -28,3 +28,11 @@
 .cm-list-item{
   color: #7D04C9;
 }
+.cm-bold{
+  font-weight:bold;
+  color: #7D04C9;
+}
+.cm-italic{
+  font-style:italic;
+  color: #7D04C9;  
+}
