@@ -1,0 +1,30 @@
+.cm-statement-definition, .cm-statement-reference, .cm-statement-mention{
+  color:cornflowerblue;
+  font-weight:bold;
+}
+.cm-argument-definition, .cm-argument-reference, .cm-argument-mention{
+  color:blue;
+  font-weight:bold;
+}
+.cm-incoming-support, .cm-outgoing-support{
+  color:green;
+  font-weight:bold;
+}
+.cm-incoming-attack, .cm-outgoing-attack, .cm-contradiction{
+  color:red;
+  font-weight:bold;
+}
+.cm-heading{
+  font-weight:bold;
+  color: #7D04C9;
+}
+.cm-inference{
+  color:blue;
+}
+.cm-argument-statement{
+  color:blue;
+  font-weight:bold;
+}
+.cm-list-item{
+  color: #7D04C9;
+}
