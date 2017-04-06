@@ -1,6 +1,4 @@
-var CodeMirror = require('codemirror');
-
-CodeMirror.defineSimpleMode('argdown', {
+var mode = {
   start: [
     {regex: /<!--/, token: 'comment', next: 'comment'},
     {regex: /[ \t]*\(\d+\)/, sol: true, token: 'argument-statement'},
@@ -37,4 +35,5 @@ CodeMirror.defineSimpleMode('argdown', {
   meta: {
     dontIndentStates: ['comment']
   }
-})
+};
+module.exports = mode;
