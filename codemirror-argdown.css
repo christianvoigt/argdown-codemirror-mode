@@ -14,6 +14,10 @@
   color:red;
   font-weight:bold;
 }
+.cm-incoming-undercut, .cm-outgoing-undercut{
+  color:purple;
+  font-weight:bold;
+}
 .cm-heading{
   font-weight:bold;
   color: #7D04C9;
@@ -35,4 +39,8 @@
 .cm-italic{
   font-style:italic;
   color: #7D04C9;  
+}
+.cm-tag{
+  font-style:bold;
+  color: #170;
 }
