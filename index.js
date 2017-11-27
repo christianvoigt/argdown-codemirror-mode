@@ -3,7 +3,7 @@ var mode = {
     { regex: /\\./, token: 'escaped-char'},
     { regex: /<!--/, token: 'comment', next: 'htmlComment' },
     { regex: /\/\*/, token: 'comment', next: 'cMultiLineComment' },
-    { regex: /\/\//, token: 'comment', next: 'cSingleLineComment' },
+    { regex: /\/\/.*?(?:\n|\r|\r\n|$)/, token: 'comment'},
     { regex: /__.*?__+/, token: 'bold' }, //naive implementation (no ranges within bold range supported)
     { regex: /\*\*.*?\*\*+/, token: 'bold' }, //naive implementation (no ranges within bold range supported)
     { regex: /_.*?_+/, token: 'italic' }, //naive implementation (no ranges within italic range supported)
@@ -36,10 +36,6 @@ var mode = {
   ],
   cMultiLineComment: [
     { regex: /.*?\*\//, token: 'comment', next: 'start' },
-    { regex: /.*/, token: 'comment' }
-  ],
-  cSingleLineComment: [
-    { regex: /.*?(?:\n|\r|\r\n)/, token: 'comment', next: 'start' },
     { regex: /.*/, token: 'comment' }
   ],
   inference: [
